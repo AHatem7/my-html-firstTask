@@ -1,0 +1,295 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+ 
+   
+}
+
+:root {
+  --neutral-900: hsl(227, 75%, 14%);
+  --neutral-800: hsl(226, 25%, 17%);
+  --neutral-700: hsl(225, 23%, 24%);
+  --neutral-600: hsl(226, 11%, 37%);
+  --neutral-300: hsl(0, 0%, 78%);
+  --neutral-200: hsl(217, 61%, 90%);
+  --neutral-100: hsl(0, 0%, 93%);
+  --neutral-0: hsl(200, 60%, 99%);
+  /* --------------------- */
+  --background-gradiant:linear-gradient(180deg, #040918 0%, #091540 100%);
+
+  --Red-400: hsl(3, 86%, 64%);
+  --Red-500: hsl(3, 71%, 56%);
+  --Red-700: hsl(3, 77%, 44%);
+
+--button-bg: var(--neutral-700);
+--button-text: var(--neutral-0);
+
+
+
+}
+
+
+.light-theme{
+  --neutral-900: hsl(227, 75%, 14%);
+  --neutral-800: hsl(226, 25%, 17%);
+  --neutral-700: hsl(225, 23%, 24%);
+  --neutral-600: hsl(226, 11%, 37%);
+  --neutral-300: hsl(0, 0%, 78%);
+  --neutral-200: hsl(217, 61%, 90%);
+  --neutral-100: hsl(0, 0%, 93%);
+  --neutral-0: hsl(200, 60%, 99%);
+  
+
+  --background-gradiant:linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+
+  --Red-400: hsl(3, 86%, 64%);
+  --Red-500: hsl(3, 71%, 56%);
+  --Red-700: hsl(3, 77%, 44%);
+  --button-bg: var(--neutral-0);
+  --button-text: var(--neutral-900);
+
+  
+
+}
+
+
+
+.logo-header{
+    
+display: flex;
+justify-content: space-between;
+width: 100%;
+background: var(--button-bg);
+ padding: 10px;
+ border-radius: 15px;
+ margin-bottom: 60px;
+
+}
+.logo-header #sun{
+    cursor: pointer;
+    background: var(--neutral-600);
+    padding: 10px;
+    border-radius: 12px;
+}
+
+
+body{
+min-height: 100vh;
+width: 100%;
+ background:var(--background-gradiant);
+ padding: 50px 150px;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ font-family: Noto Sans;
+
+}
+
+ .headline {
+display: flex;
+   align-items: center;
+  
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 30px;
+  
+}
+
+.headline h1 {
+color:var(--button-text);
+
+}
+
+.headline section {
+    display: flex;
+    gap: 20px;
+}
+
+
+
+
+.headline button {
+padding: 10px 18px;
+cursor: pointer;
+border-radius: 20px;
+background: var(--button-bg);
+color:var(--button-text);
+  
+}
+.headline button:hover{
+
+    background: var(--Red-500);
+    
+}
+
+
+.card-space{
+display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 10px;
+  
+  width: 100%;
+ 
+ 
+
+}
+
+.card {
+    height: 180px;
+    width: 100%; 
+  max-width: 100%; 
+    padding: 15px;
+
+    border-radius: 15px;
+     background: var(--button-bg);
+   
+    
+     color: var(--button-text);
+     display: flex;
+     flex-direction: column;
+  justify-content:space-between ;
+  
+    border: 1px solid var(--neutral-300);
+
+}
+
+.card img {
+    height: 50px;
+    width: 50px;
+}
+
+.card-top {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.card-content b {
+    font-size: 20px;
+    display: block;
+    margin-bottom: 6px;
+  
+}
+.card-content p {
+
+    color: var(--neutral-300);
+   
+}
+
+.card-down {
+
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.card-down button{
+
+    padding: 8px 12px;
+    color: var(--button-text);
+    background: var(--button-bg); 
+    border-radius: 15px;
+    font-size: 12px;
+
+}
+
+.card-down button:hover{
+  background: var(--Red-500);
+ 
+}
+
+
+.switch {
+    margin-top: 10px;
+
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: var(--neutral-600);
+  border-radius: 20px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: background-color 0.3s;
+}
+
+
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+
+.switch input:checked + .slider {
+  background-color: var(--Red-500);
+}
+
+.switch input:checked + .slider::before {
+  transform: translateX(20px)
+}
+
+
+.filter-btn.active {
+  background-color: var(--Red-500);
+  color: white;
+}
+
+
+
+@media (max-width: 550px) {
+  .card-space {
+    grid-template-columns: 1fr; 
+    gap: 15px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 100%;
+    padding: 12px;
+    box-sizing: border-box; 
+  }
+
+  .headline {
+    flex-direction: column; 
+   
+    gap: 12px;
+  }
+
+  .headline section {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content:space-evenly;
+  }
+
+ 
+
+  body {
+    padding: 20px; 
+  }
+}
