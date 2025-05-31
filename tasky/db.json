@@ -1,0 +1,12 @@
+{
+  "tasks": [
+    {
+      "title": "task2 fullstack",
+      "description": "todo list",
+      "dueDate": "31/05/2025",
+      "priority": "1",
+      "createdAt": "2025-05-31",
+      "completed": true
+    }
+  ]
+}
