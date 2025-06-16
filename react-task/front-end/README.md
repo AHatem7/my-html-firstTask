@@ -27,4 +27,17 @@ HabitForge is a full-stack habit tracker built with **React**, **Express**, **SQ
 ---
 
 ## 📂 Project Structure
-
+habitforge/
+├── backend/
+│ ├── src/
+│ │ ├── routes/
+│ │ ├── controllers/
+│ │ ├── db/
+│ │ └── index.js
+│ └── drizzle.config.js
+├── frontend/
+│ ├── src/
+│ │ ├── pages/
+│ │ ├── components/
+│ │ └── App.jsx
+└── README.md
